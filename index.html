@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesoría IA Fácil - Pacheco DSNG / Mr. Apache</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: #f5f8fa;
+            color: #2c3e50;
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+        .header {
+            background: linear-gradient(135deg, #0D47A1 0%, #1a237e 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 5px solid #00E676;
+        }
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .header .highlight {
+            color: #FF007F;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        /* Perfil del Asesor - Abraham Pacheco */
+        .profile-card {
+            background: white;
+            border-radius: 15px;
+            padding: 35px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-top: -30px;
+            margin-bottom: 25px;
+            border-top: 5px solid #FF007F;
+        }
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #0D47A1;
+            margin-bottom: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+        .profile-name {
+            font-size: 1.6rem;
+            color: #0D47A1;
+            font-weight: bold;
+        }
+        .profile-title {
+            font-size: 1.1rem;
+            color: #FF007F;
+            font-weight: bold;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .profile-bio {
+            font-size: 1rem;
+            color: #555;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid #0D47A1;
+        }
+        .card-title {
+            font-size: 1.3rem;
+            color: #0D47A1;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+        }
+        .day-badge {
+            background-color: #FF007F;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: none;
+        }
+        li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 25px;
+            font-size: 1.05rem;
+        }
+        li::before {
+            content: "✓";
+            color: #00E676;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        /* Galería de Muestras */
+        .gallery-section {
+            margin: 35px 0;
+        }
+        .gallery-title {
+            color: #0D47A1;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .gallery-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-desc {
+            padding: 10px;
+            font-size: 0.85rem;
+            color: #666;
+            text-align: center;
+            background-color: #fafafa;
+            border-top: 1px solid #edf2f7;
+        }
+        .price-box {
+            background-color: #FFD600;
+            color: #0D47A1;
+            text-align: center;
+            padding: 22px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin: 30px 0;
+            border: 2px dashed #0D47A1;
+        }
+        .btn-whatsapp {
+            display: block;
+            background-color: #00E676;
+            color: white;
+            text-align: center;
+            padding: 18px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: bold;
+            box-shadow: 0 5px 18px rgba(0,230,118,0.4);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn-whatsapp:hover {
+            transform: scale(1.02);
+            background-color: #00c853;
+        }
+        .footer {
+            text-align: center;
+            padding-top: 35px;
+            font-size: 0.85rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Descubre lo <span class="highlight">FÁCIL</span> que es usar la IA</h1>
+        <p>Aprende paso a paso sin complicaciones técnicas desde tu propio celular</p>
+    </div>
+
+    <div class="container">
+        
+        <!-- Perfil de Abraham Pacheco (Mr. Apache) -->
+        <!-- SECCIÓN SOBRE MÍ / DIÁLOGOS DE TRAYECTORIA - INTEGRADO EN TARJETA DE PERFIL -->
+<div class="profile-card" style="background: white; border-radius: 15px; padding: 35px 20px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-top: -30px; margin-bottom: 25px; border-top: 5px solid #FF007F;">
+    
+    <!-- Tu foto local corregida -->
+    <img src="abraham-pacheco.jpg" alt="Abraham Pacheco - Mr. Apache" class="profile-img" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid #0D47A1; margin-bottom: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+    
+    <div class="profile-name" style="font-size: 1.6rem; color: #0D47A1; font-weight: bold;">Abraham Pacheco</div>
+    <div class="profile-title" style="font-size: 1.1rem; color: #FF007F; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">Mr. Apache - Fundador de Pacheco DSNG</div>
+    
+    <!-- Bloque de Diálogo de Introducción y Trayectoria Humana -->
+    <div class="profile-dialogs" style="text-align: left; max-width: 500px; margin: 0 auto; color: #4a5568; font-size: 1rem; line-height: 1.6;">
+        <p style="margin-bottom: 12px;">
+            ¡Hola! Qué gusto saludarte. Mi nombre es <strong>Abraham Pacheco</strong>, aunque en el mundo digital muchos me conocen como <strong>Mr. Apache</strong>. Desde hace años, a través de mi firma <strong>Pacheco DSNG</strong>, me he dedicado apasionadamente al diseño gráfico, al marketing digital y al desarrollo de sistemas web y automatizaciones.
+        </p>
+        
+        <p style="margin-bottom: 12px;">
+            A lo largo de mi trayectoria, he tenido el privilegio de construir marcas desde cero, diseñar estrategias de venta digital y programar plataformas complejas (como sistemas de gestión de datos y bases de datos automatizadas). Sé exactamente lo intimidante y fría que puede parecer la tecnología cuando se llena de códigos o tecnicismos complicados.
+        </p>
+        
+        <p style="margin-bottom: 15px;">
+            Por eso decidí crear este espacio. Mi misión hoy no es abrumarte con teoría informática, sino tomar toda esa experiencia técnica y traducírtela de la forma más **sencilla, humana y práctica posible**. Quiero enseñarte que la Inteligencia Artificial no es cosa del futuro ni requiere que seas un ingeniero: es una herramienta maravillosa que puedes dominar hoy mismo usando solo tu celular y tu WhatsApp. ¡Te espero para empezar juntos!
+        </p>
+    </div>
+
+        <div class="card">
+            <div class="card-title">
+                <span class="day-badge">DÍA 1</span> Perdiendo el miedo a la tecnología
+            </div>
+            <ul>
+                <li>¿Qué es la IA en el día a día? Tu nuevo asistente en el celular.</li>
+                <li>Redactar mensajes impecables, cartas y comunicarte mejor.</li>
+                <li>Práctica en vivo: Respuestas rápidas a problemas cotidianos.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <span class="day-badge">DÍA 2</span> El Poder de la Creatividad Visual
+            </div>
+            <ul>
+                <li>Aprende a crear imágenes artísticas sorprendentes en segundos.</li>
+                <li>Ideas interactivas para tareas escolares y entrenamiento de niños.</li>
+                <li>Uso seguro de la tecnología y protección familiar.</li>
+            </ul>
+        </div>
+
+        <!-- Galería de Muestras Generadas por IA -->
+        <div class="gallery-section">
+            <div class="gallery-title">🎨 Mira lo que TÚ vas a aprender a crear:</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400" alt="Diseño por IA">
+                    <div class="gallery-desc">Arte Conceptual y Gráfico</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400" alt="Ilustración IA">
+                    <div class="gallery-desc">Ilustración Creativa Infantil</div>
+                </div>
+            </div>
+        </div>
+<!-- SECCIÓN CRONOGRAMA INTERACTIVO -->
+<div class="cronograma-section" style="margin: 35px 0;">
+    <h2 style="color: #0D47A1; text-align: center; margin-bottom: 20px; font-size: 1.5rem;">📅 CRONOGRAMA DEL CURSO (2 DÍAS / 2 HORAS)</h2>
+    
+    <!-- TARJETA DÍA 1 -->
+    <div class="timeline-card" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-left: 5px solid #FF007F;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <span style="background: #FF007F; color: white; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 0.85rem;">DÍA 1</span>
+            <span style="font-weight: bold; color: #777; font-size: 0.9rem;">1 Hora Activa</span>
+        </div>
+        <h3 style="color: #0D47A1; font-size: 1.2rem; margin-bottom: 10px;">El Despertar Digital: Perdiendo el Miedo</h3>
+        <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 8px; font-size: 0.95rem; color: #4a5568;">⏰ <strong>00-10 min:</strong> Bienvenida en WhatsApp y Notas de Voz de Mr. Apache.</li>
+            <li style="margin-bottom: 8px; font-size: 0.95rem; color: #4a5568;">⏰ <strong>10-25 min:</strong> ¿Qué es la IA? El Genio sabelotodo dentro de tu teléfono.</li>
+            <li style="margin-bottom: 8px; font-size: 0.95rem; color: #4a5568;">⏰ <strong>25-50 min:</strong> Práctica Guiada: Cómo pedir recetas de cocina y crear cuentos infantiles.</li>
+            <li style="margin-bottom: 8px; font-size: 0.95rem; color: #4a5568;">⏰ <strong>50-60 min:</strong> Preguntas en vivo y asignación del Reto Divertido.</li>
+        </ul>
+    </div>
+
+    <!-- TARJETA DÍA 2 -->
+    <div class="timeline-card" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-left: 5px solid #00E676;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <span style="background: #00E676; color: white; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 0.85rem;">DÍA 2</span>
+            <span style="font-weight: bold; color: #777; font-size: 0.9rem;">1 Hora Activa</span>
+        </div>
+        <h3 style="color: #0D47A1; font-size: 1.2rem; margin-bottom: 10px;">Magia Visual y Soluciones Cotidianas</h3>
+        <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 8px; font-size: 0.95rem; color: #4a5568;">⏰ <strong>00-10 min:</strong> Galería comunitaria: Revisión de las tareas del Día 1.</li>
+            <li style="margin-bottom: 8px; font-size: 0.95rem; color: #4a5568;">⏰ <strong>10-35 min:</strong> ¡Creando magia! Cómo generar imágenes de arte digital desde el chat.</li>
+            <li style="margin-bottom: 8px; font-size: 0.95rem; color: #4a5568;">⏰ <strong>35-50 min:</strong> Tareas escolares divertidas para niños y resúmenes de textos para adultos.</li>
+            <li style="margin-bottom: 8px; font-size: 0.95rem; color: #4a5568;">⏰ <strong>50-60 min:</strong> Clausura, entrega de Diplomas Digitales y próximos pasos.</li>
+        </ul>
+    </div>
+</div>
+        <div class="price-box">
+            ⏰ DURACIÓN EXACTA: 2 HORAS (1 hora por día)<br>
+            📱 ¡Solo necesitas tu celular y WhatsApp! Cero experiencia requerida.
+        </div>
+
+        <a href="https://wa.me/584244033306?text=Hola%20Mr.%20Apache,%20quiero%20inscribirme%20en%20la%20asesor%C3%ADa%20de%20Inteligencia%20Artificial%20F%C3%A1cil" class="btn-whatsapp" target="_blank">
+            📲 Reservar Cupo con Mr. Apache por WhatsApp
+        </a>
+
+        <div class="footer">
+            Diseñado y desarrollado por Pacheco DSNG &copy; 2026
+        </div>
+    </div>
+
+</body>
+</html>
